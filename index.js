@@ -90,30 +90,19 @@ function setup() {
         pool.appendChild(e)
         e.addEventListener("dragstart", dragstart_handler);
     });
-    updateCounts();
 }
 
-
-function updateCounts() {
-    $("countInPool").textContent = "" + $('pool').children.length;
-    document.querySelectorAll(".lane").forEach(lane => {
-        lane.querySelector(".count").textContent = "" + lane.querySelectorAll(".item").length;
-    });
-}
 
 function dragstart_handler(ev) {
     // Add the target element's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);
     ev.dataTransfer.dropEffect = "move";
-    //ev.dataTransfer.dropEffect = "move";
     console.log("dragstart: ", ev.dataTransfer);
-    updateCounts();
 }
 
 function dragover_handler(ev) {
     ev.preventDefault();
     //ev.dataTransfer.dropEffect = "move";
-    updateCounts();
 }
 
 function drop_handler(ev) {
@@ -134,8 +123,6 @@ function drop_handler(ev) {
 
     console.log("destination El is: ", destinationEl)
     destinationEl.appendChild($(data));
-
-    updateCounts();
 }
 
 function $(id) {

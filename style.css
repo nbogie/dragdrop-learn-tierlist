@@ -1,28 +1,81 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 #container {
   display: flex;
   flex-direction: row;
 }
+
 #main {
   display: flex;
   flex-direction: column;
 }
 
-#pool,
-.lane {
-  padding: 20px;
-  margin: 20px;
+.labelledLane,
+#pool {
+  padding: 0;
+  background: black;
+  margin: 2px;
   border: 2px dashed black;
-  border-radius: 10px;
 }
 
-.count {
-  font-size: 2rem;
-  font-weight: bolder;
+.labelledLane {
+  display: flex;
+  align-items: stretch;
+  border: pink 1px dashed;
 }
 
-img {
+.lane {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #222;
+  height: 50px;
+  width: 100%;
+  border: blue 2px solid;
+}
+.labelledLane .label {
+  height: 100%;
+  padding: 20px;
+  border: 2px solid white;
+}
+.labelledLane.s .label {
+  background: #ff7f7f;
+}
+.labelledLane.a .label {
+  background: #fdbe7b;
+}
+.labelledLane.b .label {
+  background: #fffd83;
+}
+.labelledLane.c .label {
+  background: #7cfe7b;
+}
+.labelledLane.d .label {
+  background: #7fc1ff;
+}
+.labelledLane.e .label {
+  background: #807ffe;
+}
+.labelledLane.f .label {
+  background: #fe7ffe;
+}
+
+img.item {
   padding: 1px;
   border-radius: 3px;
   margin: 1px;
   /* border: 1px solid #aaa; */
+  height: 40px;
 }

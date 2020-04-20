@@ -5,13 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/style.css" />
     <script src="/index.js" defer></script>
-    <style>
-      .item {
-        height: 40px;
-      }
-    </style>
   </head>
 
   <body>
@@ -19,25 +18,38 @@
 
     <div id="container">
       <div id="main">
-        <h1>Pool (<span class="count" id="countInPool"></span>)</h1>
+        <h1>Pool</h1>
 
         <div id="pool" class="dropTarget"></div>
 
         <h1>Lanes</h1>
-        <div id="lane1" class="lane dropTarget">
-          <span>Lane 1</span>(<span class="count"></span>)
+        <div class="labelledLane s">
+          <div class="label">S</div>
+          <div id="lane1" class="lane s dropTarget"></div>
         </div>
-        <div id="lane2" class="lane dropTarget">
-          <span>Lane 2</span>(<span class="count"></span>)
+        <div class="labelledLane a">
+          <div class="label">A</div>
+          <div id="lane2" class="lane a dropTarget"></div>
         </div>
-        <div id="lane3" class="lane dropTarget">
-          <span>Lane 3</span>(<span class="count"></span>)
+        <div class="labelledLane b">
+          <div class="label">B</div>
+          <div id="lane3" class="lane b dropTarget"></div>
         </div>
-        <div id="lane4" class="lane dropTarget">
-          <span>Lane 4</span>(<span class="count"></span>)
+        <div class="labelledLane c">
+          <div class="label">C</div>
+          <div id="lane4" class="lane b dropTarget"></div>
         </div>
-        <div id="lane5" class="lane dropTarget">
-          <span>Lane 5</span>(<span class="count"></span>)
+        <div class="labelledLane d">
+          <div class="label">D</div>
+          <div id="lane5" class="lane d dropTarget"></div>
+        </div>
+        <div class="labelledLane e">
+          <div class="label">E</div>
+          <div id="lane6" class="lane e dropTarget"></div>
+        </div>
+        <div class="labelledLane f">
+          <div class="label">F</div>
+          <div id="lane7" class="lane f dropTarget">yo</div>
         </div>
       </div>
     </div>
