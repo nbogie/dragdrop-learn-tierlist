@@ -8,7 +8,6 @@
 }
 
 #pool,
-#debugPanel,
 .lane {
   padding: 20px;
   margin: 20px;
@@ -20,7 +19,10 @@
   font-size: 2rem;
   font-weight: bolder;
 }
-p {
-  padding: 10px;
-  border: 1px solid black;
+
+img {
+  padding: 1px;
+  border-radius: 3px;
+  margin: 1px;
+  /* border: 1px solid #aaa; */
 }

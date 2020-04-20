@@ -127,11 +127,14 @@ function drop_handler(ev) {
     // Get the id of the target and add the moved element to the target's DOM
     const data = ev.dataTransfer.getData("text/plain");
 
-    let destinationEl = ev.target.tagName === "IMG" ? ev.target.parentElement : ev.target;
-    console.log("parent is", destinationEl)
+    const isADropTarget = ev.target.classList.contains("dropTarget");
+    console.log("dropping", ev.target.tagName, data, ev, ev.target.classList, isADropTarget);
+
+    let destinationEl = isADropTarget ? ev.target : ev.target.closest(".dropTarget");
+
+    console.log("destination El is: ", destinationEl)
     destinationEl.appendChild($(data));
 
-    console.log("dropping", ev.target.tagName, data, ev);
     updateCounts();
 }
 
